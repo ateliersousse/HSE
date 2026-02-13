@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo"><img src="logo.png" alt="Logo" class="logo-img"></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="reservation.html">Reservation</a>
+    </nav>
+</header>
+
+<section class="reservation">
+    <h1>Réservation</h1>
+
+    <form action="mailto:abaklouti09@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="Nom" placeholder="Nom complet" required>
+        <input type="tel" name="Téléphone" placeholder="Téléphone" required>
+        <input type="email" name="Email" placeholder="Email" required>
+        <textarea name="Description" placeholder="Description du service demandé"></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+
+<button id="back-top" onclick="window.scrollTo({top:0, behavior:'smooth'});">↑</button>
+
+</body>
+</html>
 
