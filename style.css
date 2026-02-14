@@ -25,14 +25,7 @@ z-index:1000;
     display: block;    /* bach yji wahdou f line */
     margin: 0 auto;    /* bach yji fel center si container mcentred */
 }
-.logo{font-weight:bold;font-size:22px;}
-.menu-toggle{
-font-size:28px;
-cursor:pointer;
-position:absolute;
-right:20px;
-transition:0.3s;
-}
+
 
 /* SIDE MENU */
 .side-menu{
