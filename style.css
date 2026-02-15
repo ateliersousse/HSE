@@ -5,6 +5,14 @@ background:#0d0d0d;
 color:white;
 overflow-x:hidden;
 }
+.logo {
+    width: 10vw;       /* largeur 10% men view width */
+    max-width: 60px;   /* ma t7ech 60px fel grande écran */
+    min-width: 30px;   /* ma t9alch 30px fel petit écran */
+    height: auto;      /* height automatique bch ma ybaddelch proportion */
+    display: flex;    /* bach yji wahdou f line */
+}
+
 
 /* HEADER */
 .header{
@@ -18,14 +26,6 @@ background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
-.logo {
-    width: 10vw;       /* largeur 10% men view width */
-    max-width: 60px;   /* ma t7ech 60px fel grande écran */
-    min-width: 30px;   /* ma t9alch 30px fel petit écran */
-    height: auto;      /* height automatique bch ma ybaddelch proportion */
-    display: block;    /* bach yji wahdou f line */
-}
-
 
 /* SIDE MENU */
 .side-menu{
