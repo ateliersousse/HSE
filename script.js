@@ -3,11 +3,7 @@ window.addEventListener("load", () => {
   document.querySelector(".loader").style.display = "none";
 });
 
-// Navbar Scroll
-window.addEventListener("scroll", () => {
-  document.querySelector(".header")
-  .classList.toggle("scrolled", window.scrollY > 50);
-});
+// Navbar
 <script>
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
