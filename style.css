@@ -2,194 +2,195 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
+  font-family:'Poppins',sans-serif;
 }
 
 body{
-  background:#0f0f0f;
+  background:#0a0f15;
   color:white;
   overflow-x:hidden;
-}
-
-/* ANIMATED BACKGROUND */
-.gradient-bg{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:linear-gradient(-45deg,#0f0f0f,#001f2e,#0f0f0f,#002f3f);
-  background-size:400% 400%;
-  animation:gradientMove 15s ease infinite;
-  z-index:-1;
-}
-
-@keyframes gradientMove{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
-
-/* LOADER */
-.loader{
-  position:fixed;
-  width:100%;
-  height:100vh;
-  background:#000;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-}
-
-.spinner{
-  width:50px;
-  height:50px;
-  border:5px solid #222;
-  border-top:5px solid #00c3ff;
-  border-radius:50%;
-  animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-  100%{ transform:rotate(360deg); }
 }
 
 /* HEADER */
 .header{
   position:fixed;
   width:100%;
+  padding:20px 80px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px 60px;
-  background:rgba(0,0,0,0.6);
+  background:rgba(5,10,20,0.6);
   backdrop-filter:blur(15px);
-  transition:0.4s;
   z-index:1000;
-}
-
-.header.scrolled{
-  background:#000;
-  box-shadow:0 5px 20px rgba(0,195,255,0.4);
 }
 
 .logo img{ width:120px; }
 
-.nav{
-  display:flex;
-  gap:30px;
-}
-
 .nav a{
-  text-decoration:none;
   color:white;
+  text-decoration:none;
+  margin-left:30px;
   transition:0.3s;
 }
 
-.nav a:hover{ color:#00c3ff; }
+.nav a:hover{
+  color:#00c3ff;
+}
 
 /* HERO */
 .hero{
   height:100vh;
-  background:url("assets/IMG-20260213-WA0029.jpg") center/cover fixed;
+  background:
+  linear-gradient(rgba(0,20,40,0.75),rgba(0,20,40,0.75)),
+  url("assets/IMG-20260213-WA0029.jpg") center/cover no-repeat;
   display:flex;
   justify-content:center;
   align-items:center;
   text-align:center;
+  position:relative;
 }
 
-.hero-content{
-  background:rgba(0,0,0,0.7);
-  padding:60px;
-  border-radius:15px;
+.hero::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:200px;
+  background:linear-gradient(to top,#0a0f15,transparent);
 }
 
 .hero h1{
-  font-size:55px;
-  margin-bottom:20px;
+  font-size:65px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-shadow:0 0 25px rgba(0,195,255,0.6);
 }
 
-.hero span{ color:#00c3ff; }
+.hero span{
+  color:#00c3ff;
+  display:block;
+  margin-top:10px;
+  text-shadow:0 0 20px rgba(0,195,255,0.8);
+}
 
-/* STATS */
+.hero p{
+  margin-top:25px;
+  max-width:750px;
+  opacity:0.9;
+}
+
+/* STATS BAR */
 .stats{
+  background:linear-gradient(to right,#0e1824,#0a0f15);
   display:flex;
   justify-content:center;
-  gap:80px;
-  padding:100px 0;
-  background:#111;
+  align-items:center;
+  padding:50px 0;
+  gap:140px;
+  box-shadow:0 -10px 30px rgba(0,0,0,0.8);
+}
+
+.stat{
+  text-align:center;
+  position:relative;
+}
+
+.stat:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  right:-70px;
+  top:50%;
+  transform:translateY(-50%);
+  width:1px;
+  height:60px;
+  background:rgba(255,255,255,0.15);
 }
 
 .stat h2{
-  font-size:50px;
+  font-size:48px;
   color:#00c3ff;
+  text-shadow:0 0 15px rgba(0,195,255,0.7);
 }
 
-/* SERVICES */
+.stat p{
+  margin-top:5px;
+  font-size:14px;
+  opacity:0.7;
+}
+
+/* SERVICES SECTION */
 .services{
-  padding:120px 80px;
+  padding:140px 80px;
+  background:
+  linear-gradient(rgba(0,15,30,0.85),rgba(0,15,30,0.85)),
+  url("assets/IMG-20260213-WA0029.jpg") center/cover fixed;
+  position:relative;
 }
 
 .section-title{
   text-align:center;
-  font-size:40px;
-  margin-bottom:60px;
+  font-size:50px;
+  margin-bottom:100px;
   color:#00c3ff;
+  text-shadow:0 0 20px rgba(0,195,255,0.6);
+}
+
+/* LIGHT WAVE EFFECT */
+.section-title::after{
+  content:"";
+  display:block;
+  margin:20px auto 0;
+  width:200px;
+  height:4px;
+  background:linear-gradient(to right,transparent,#00c3ff,transparent);
+  border-radius:5px;
 }
 
 .services-container{
   display:flex;
-  gap:30px;
   justify-content:center;
+  gap:60px;
   flex-wrap:wrap;
 }
 
+/* CINEMATIC CARDS */
 .service-card{
-  background:#1a1a1a;
-  width:320px;
-  padding:20px;
-  border-radius:20px;
+  width:330px;
+  background:linear-gradient(145deg,#1a2635,#0e141d);
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,0.9);
   transition:0.5s;
-  transform-style:preserve-3d;
+  position:relative;
+}
+
+.service-card::after{
+  content:"";
+  position:absolute;
+  bottom:-20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:80%;
+  height:40px;
+  background:radial-gradient(rgba(0,195,255,0.4),transparent);
+  filter:blur(15px);
 }
 
 .service-card:hover{
-  transform:rotateY(5deg) rotateX(5deg) scale(1.05);
-  box-shadow:0 30px 60px rgba(0,195,255,0.4);
+  transform:translateY(-20px) scale(1.07);
+  box-shadow:0 40px 100px rgba(0,195,255,0.4);
 }
 
 .service-card img{
   width:100%;
-  border-radius:15px;
-  margin-bottom:15px;
-  cursor:pointer;
+  height:230px;
+  object-fit:cover;
 }
 
-/* REVEAL */
-.reveal{
-  opacity:0;
-  transform:translateY(50px);
-  transition:1s;
-}
-
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* LIGHTBOX */
-.lightbox{
-  position:fixed;
-  width:100%;
-  height:100vh;
-  background:rgba(0,0,0,0.9);
-  display:none;
-  justify-content:center;
-  align-items:center;
-}
-
-.lightbox img{
-  max-width:90%;
-  max-height:80%;
+.service-card p{
+  padding:25px;
+  font-size:14px;
+  opacity:0.9;
 }
 
 /* WHATSAPP */
@@ -198,24 +199,27 @@ body{
   bottom:25px;
   left:25px;
   background:#25D366;
-  color:white;
-  width:60px;
-  height:60px;
+  width:65px;
+  height:65px;
   border-radius:50%;
   display:flex;
   justify-content:center;
   align-items:center;
-  font-size:25px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.4);
+  font-size:28px;
+  color:white;
+  box-shadow:0 15px 35px rgba(0,0,0,0.6);
   transition:0.3s;
 }
 
 .whatsapp-float:hover{
-  transform:scale(1.1);
+  transform:scale(1.15);
 }
 
+/* FOOTER */
 footer{
+  background:#05080d;
   text-align:center;
   padding:40px;
-  background:#000;
+  font-size:14px;
+  opacity:0.6;
 }
