@@ -14,8 +14,8 @@ body{
 /* HEADER */
 .header{
   position:fixed;
-  width:30%;
-  padding:20px 50px;
+  width:100%;
+  padding:20px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -24,7 +24,7 @@ body{
   z-index:1000;
 }
 
-.logo img{ width:120px; }
+.logo img{ width:150px; }
 
 .nav-links {
   position: absolute;
