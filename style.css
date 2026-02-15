@@ -9,23 +9,23 @@ overflow-x:hidden;
 .header{
 position:fixed;
 top:0;
-width:20%;
+left:0;
+width:100%;              /* مش 20% */
 display:flex;
-justify-content:space-between;
-padding:0 20px;
+align-items:center;
+justify-content:space-between;  /* logo isar / menu imin */
+padding:15px 40px;
 background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
-.logo-img {
-    width: 120px;       /* largeur 10% men view width */
-  /*  max-width: 60px;   /* ma t7ech 60px fel grande écran */
-    /*min-width: 30px;   /* ma t9alch 30px fel petit écran */
-    height: auto;      /* height automatique bch ma ybaddelch proportion */
-   /* display: flex;    /* bach yji wahdou f line */
-    margin-right: auto;
-    
+.logo-img{
+width:120px;
+height:auto;
+display:block;
 }
+
+
 /* SIDE MENU */
 .side-menu{
 position:fixed;
