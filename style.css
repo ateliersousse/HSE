@@ -14,7 +14,7 @@ body{
 /* HEADER */
 .header{
   position:fixed;
-  width:10%;
+  width:100%;
   padding:20px 20px;
   display:flex;
   justify-content:space-between;
