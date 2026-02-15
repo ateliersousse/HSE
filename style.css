@@ -20,10 +20,11 @@ backdrop-filter:blur(10px);
 z-index:1000;
 }
 .logo {
-    width: 200px;      /* l3rd ta3 logo */
+    width: 10vw;       /* largeur 10% men view width */
+    max-width: 60px;   /* ma t7ech 60px fel grande écran */
+    min-width: 30px;   /* ma t9alch 30px fel petit écran */
     height: auto;      /* height automatique bch ma ybaddelch proportion */
     display: block;    /* bach yji wahdou f line */
-    margin: 0 auto;    /* bach yji fel center si container mcentred */
 }
 
 
