@@ -3,68 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HSE Legendary Agency</title>
+<title>HSE Hydraulic Engineering</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
+<div class="gradient-bg"></div>
+
+<!-- LOADER -->
+<div class="loader">
+  <div class="spinner"></div>
+</div>
+
 <header class="header">
-    <div class="logo-img"><img src=""></div>
-    <div class="menu-toggle" id="menuToggle">☰</div>
+  <div class="logo">
+    <img src="logo (1).png">
+  </div>
+
+  <div class="menu-toggle" id="menuToggle">☰</div>
+
+  <nav class="nav" id="nav">
+    <a href="#home">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#">About</a>
+    <a href="#">Reservation</a>
+  </nav>
 </header>
 
-<nav class="side-menu" id="sideMenu">
-    <a href="about.html">About</a>
-    <a href="reservation.html">Reservation</a>
-    <a href="#" id="contactBtn">Contact</a>
-</nav>
-
-<section class="hero">
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content reveal">
     <h1>HYDRAULIC <span>SOLUTIONS & ENGINEERING</span></h1>
     <p>
-        La réparation hydraulique consiste à diagnostiquer, réparer et entretenir les systèmes hydrauliques industriels afin d’assurer performance, sécurité et longévité.
+      La réparation hydraulique consiste à diagnostiquer, réparer et entretenir les systèmes hydrauliques industriels afin d’assurer performance, sécurité et longévité.
     </p>
+  </div>
 </section>
 
-<section class="services">
-    <h2>Nos Services</h2>
+<!-- STATS -->
+<section class="stats">
+  <div class="stat">
+    <h2 class="counter" data-target="10">0</h2>
+    <p>Années d'expérience</p>
+  </div>
 
-    <div class="service">
-        <img src="assets/Verin/IMG-20260213-WA0040.jpg" class="zoomable">
-        <p>Maintenance et remise en état des vérins hydrauliques industriels pour assurer performance optimale.</p>
+  <div class="stat">
+    <h2 class="counter" data-target="250">0</h2>
+    <p>Projets réalisés</p>
+  </div>
+
+  <div class="stat">
+    <h2 class="counter" data-target="100">0</h2>
+    <p>Clients satisfaits %</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <h2 class="section-title reveal">Nos Services</h2>
+
+  <div class="services-container">
+
+    <div class="service-card reveal">
+      <img src="assets/Verin/IMG-20260213-WA0040.jpg" class="zoomable">
+      <p>Maintenance et remise en état des vérins hydrauliques industriels pour assurer performance optimale.</p>
     </div>
 
-    <div class="service">
-        <img src="assets/IMG-20260213-WA0029.jpg" class="zoomable">
-        <p>Diagnostic et réparation des pompes haute pression avec contrôle précis des composants internes.</p>
+    <div class="service-card reveal">
+      <img src="assets/IMG-20260213-WA0029.jpg" class="zoomable">
+      <p>Diagnostic et réparation des pompes haute pression avec contrôle précis des composants internes.</p>
     </div>
 
-    <div class="service">
-        <img src="assets/distr/IMG-20260213-WA0054.jpg" class="zoomable">
-        <p>Réparation et réglage des distributeurs hydrauliques pour garantir une circulation fluide et sécurisée.</p>
+    <div class="service-card reveal">
+      <img src="assets/distr/IMG-20260213-WA0054.jpg" class="zoomable">
+      <p>Réparation et réglage des distributeurs hydrauliques pour garantir une circulation fluide et sécurisée.</p>
     </div>
 
+  </div>
 </section>
 
 <footer>
 © 2016 HSE Hydraulic Engineering
 </footer>
 
-<!-- Lightbox -->
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
-    <img id="lightboxImg">
+  <img id="lightboxImg">
 </div>
 
-<!-- Contact Popup -->
-<div class="contact-popup" id="contactPopup">
-    <div class="contact-box">
-        <a href="https://wa.me/21655138035" target="_blank">📱 WhatsApp 55138035</a>
-        <a href="mailto:abaklouti09@gmail.com">📩 abaklouti09@gmail.com</a>
-    </div>
-</div>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/21655138035" class="whatsapp-float" target="_blank">💬</a>
 
 <script src="script.js"></script>
 </body>
-      </html>
-  
+    </html>
+    
