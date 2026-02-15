@@ -8,6 +8,20 @@ window.addEventListener("scroll", () => {
   document.querySelector(".header")
   .classList.toggle("scrolled", window.scrollY > 50);
 });
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function(e) {
+  e.stopPropagation(); 
+  navLinks.classList.toggle("active");
+});
+
+document.addEventListener("click", function() {
+  navLinks.classList.remove("active");
+});
+</script>
+
 
 // Reveal
 window.addEventListener("scroll", () => {
