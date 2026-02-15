@@ -1,42 +1,48 @@
-// MENU TOGGLE
-const menuToggle=document.getElementById("menuToggle");
-const sideMenu=document.getElementById("sideMenu");
-
-menuToggle.onclick=()=>sideMenu.classList.toggle("active");
-
-document.addEventListener("click",(e)=>{
-if(!sideMenu.contains(e.target) && !menuToggle.contains(e.target)){
-sideMenu.classList.remove("active");
-}
+// Loader
+window.addEventListener("load", () => {
+  document.querySelector(".loader").style.display = "none";
 });
 
-// HERO & SERVICES ANIMATION
-const hero=document.querySelector(".hero");
-const services=document.querySelectorAll(".service");
-const serviceTitle=document.querySelector(".services h2");
-
-window.addEventListener("load",()=>{
-hero.classList.add("show");
-serviceTitle.parentElement.classList.add("show");
-services.forEach(s=>s.classList.add("show"));
+// Navbar Scroll
+window.addEventListener("scroll", () => {
+  document.querySelector(".header")
+  .classList.toggle("scrolled", window.scrollY > 50);
 });
 
-// LIGHTBOX
-const images=document.querySelectorAll(".zoomable");
-const lightbox=document.getElementById("lightbox");
-const lightboxImg=document.getElementById("lightboxImg");
-
-images.forEach(img=>{
-img.onclick=()=>{
-lightbox.style.display="flex";
-lightboxImg.src=img.src;
-}
+// Reveal
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".reveal").forEach(el => {
+    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+      el.classList.add("active");
+    }
+  });
 });
-lightbox.onclick=()=>lightbox.style.display="none";
 
-// CONTACT POPUP
-const contactBtn=document.getElementById("contactBtn");
-const contactPopup=document.getElementById("contactPopup");
+// Counter
+document.querySelectorAll(".counter").forEach(counter => {
+  const update = () => {
+    const target = +counter.dataset.target;
+    const current = +counter.innerText;
+    const increment = target / 200;
 
-contactBtn.onclick=()=>contactPopup.style.display="flex";
-contactPopup.onclick=()=>contactPopup.style.display="none";
+    if(current < target){
+      counter.innerText = Math.ceil(current + increment);
+      setTimeout(update, 10);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  update();
+});
+
+// Lightbox
+document.querySelectorAll(".zoomable").forEach(img => {
+  img.addEventListener("click", function(){
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightboxImg").src = this.src;
+  });
+});
+
+document.getElementById("lightbox").onclick = function(){
+  this.style.display = "none";
+};
